@@ -1,15 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "../src/assets/css/index.css";
-const author = "Donald J Trump";
-const title = "Letters to Trump";
-const img = "./images/letter-to-trump.jpg";
+
+const firstBook = {
+  author: "Donald J Trump",
+  title: "Letters to Trump",
+  img: "./images/letter-to-trump.jpg",
+};
+const secondBook = {
+  author: "James Clear",
+  title: "Atomic Habits",
+  img: "./images/atomic-habits.jpg",
+};
 
 function Booklist() {
   return (
     <section className="booklist">
-      <Book img={img} title={title} author={author} />
-      <Book img={img} title={title} author={author} />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
